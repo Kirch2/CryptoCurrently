@@ -8,6 +8,7 @@ import { WatchListNew } from "./pages/WatchListNew";
 import { WatchListEdit } from "./pages/WatchListEdit";
 import { Register } from "./pages/Register";
 import { WatchListId } from "./pages/WatchListId";
+import { CryptoAlerts } from "./pages/CryptoAlertList";
 
 function App() {
   const email = localStorage.getItem("email");
@@ -41,7 +42,7 @@ function App() {
                 <p>place route here</p>
               </Route>
               <Route exact path="/crypto_alerts">
-                <p>place route here</p>
+                <CryptoAlerts />
               </Route>
               <Route exact path="/watchlists">
                 <WatchLists />
