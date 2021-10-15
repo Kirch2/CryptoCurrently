@@ -32,16 +32,16 @@ function App() {
                 <CryptoList />
               </Route>
               <Route exact path="/crypto_alerts/new">
-                <p>placeholder text</p>
+                <p>place route here</p>
               </Route>
               <Route exact path="/crypto_alerts/:id">
-                <p>placeholder text</p>
+                <p>place route here</p>
               </Route>
               <Route exact path="/crypto_alerts/:id/edit">
-                <p>placeholder text</p>
+                <p>place route here</p>
               </Route>
               <Route exact path="/crypto_alerts">
-                <p>placeholder text</p>
+                <p>place route here</p>
               </Route>
               <Route exact path="/watchlists">
                 <WatchLists />
