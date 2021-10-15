@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :watchlist_alerts
+  resources :crypto_alerts
   scope '/api' do
     # TODO - replace `resources` with individual GET/POST/PUT/DELETE routes
     resources :watchlist_entries
