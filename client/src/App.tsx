@@ -31,6 +31,18 @@ function App() {
               <Route exact path="/cryptocurrencies">
                 <CryptoList />
               </Route>
+              <Route exact path="/crypto_alerts/new">
+                <p>placeholder text</p>
+              </Route>
+              <Route exact path="/crypto_alerts/:id">
+                <p>placeholder text</p>
+              </Route>
+              <Route exact path="/crypto_alerts/:id/edit">
+                <p>placeholder text</p>
+              </Route>
+              <Route exact path="/crypto_alerts">
+                <p>placeholder text</p>
+              </Route>
               <Route exact path="/watchlists">
                 <WatchLists />
               </Route>

@@ -171,14 +171,14 @@ WatchlistEntry.create({
 
 # # # # # 
 # Seed WatchListAlert
-WatchListAlert.create({
+WatchlistAlert.create({
     frequency: "daily",
     delivery_method: "email",
     watchlist_id: 1,
     user_id: 1,
 })
 
-WatchListAlert.create({
+WatchlistAlert.create({
     frequency: "daily",
     delivery_method: "email",
     watchlist_id: 2,
@@ -189,16 +189,18 @@ WatchListAlert.create({
 # Seed CryptoAlert Data
 
 CryptoAlert.create({
-    frequency: "daily",
     delivery_method: "email",
-    watchlist_id: 1,
+    threshold_operator: ">",
+    cryptocurrency_id: 1,
+    threshold_value: 3500,
     user_id: 1,
 })
 
 CryptoAlert.create({
-    frequency: "daily",
     delivery_method: "email",
-    watchlist_id: 2,
+    threshold_operator: ">",
+    cryptocurrency_id: 2,
+    threshold_value: 45000,
     user_id: 2,
 })
 

@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_05_202842) do
+ActiveRecord::Schema.define(version: 2021_10_15_005800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "crypto_alerts", force: :cascade do |t|
+    t.string "threshold_operator"
+    t.float "threshold_value"
+    t.string "delivery_method"
+    t.bigint "cryptocurrency_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cryptocurrency_id"], name: "index_crypto_alerts_on_cryptocurrency_id"
+    t.index ["user_id"], name: "index_crypto_alerts_on_user_id"
+  end
 
   create_table "cryptocurrencies", force: :cascade do |t|
     t.string "label"
@@ -33,6 +45,17 @@ ActiveRecord::Schema.define(version: 2021_10_05_202842) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "watchlist_alerts", force: :cascade do |t|
+    t.string "frequency"
+    t.string "delivery_method"
+    t.bigint "watchlist_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_watchlist_alerts_on_user_id"
+    t.index ["watchlist_id"], name: "index_watchlist_alerts_on_watchlist_id"
   end
 
   create_table "watchlist_entries", force: :cascade do |t|
@@ -55,6 +78,10 @@ ActiveRecord::Schema.define(version: 2021_10_05_202842) do
     t.index ["user_id"], name: "index_watchlists_on_user_id"
   end
 
+  add_foreign_key "crypto_alerts", "cryptocurrencies"
+  add_foreign_key "crypto_alerts", "users"
+  add_foreign_key "watchlist_alerts", "users"
+  add_foreign_key "watchlist_alerts", "watchlists"
   add_foreign_key "watchlist_entries", "cryptocurrencies"
   add_foreign_key "watchlist_entries", "watchlists"
   add_foreign_key "watchlists", "users"

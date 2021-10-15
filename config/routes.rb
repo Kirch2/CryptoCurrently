@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :watchlist_alerts
-  resources :crypto_alerts
+  
   scope '/api' do
-    # TODO - replace `resources` with individual GET/POST/PUT/DELETE routes
+    resources :watchlist_alerts
+    resources :crypto_alerts
+  # TODO - replace `resources` with individual GET/POST/PUT/DELETE routes
     resources :watchlist_entries
     resources :watchlists
     resources :cryptocurrencies
