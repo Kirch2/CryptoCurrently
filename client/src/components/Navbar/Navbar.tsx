@@ -52,6 +52,16 @@ export function Navbar(props: NavBarProps) {
                 </NavLink>
               </li>
               <li className="nav-item">
+                <NavLink
+                  exact
+                  className="nav-link"
+                  activeClassName="active"
+                  to="/crypto_alerts"
+                >
+                  Watchlist
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <a
                   href="#logout"
                   onClick={(e) => {
