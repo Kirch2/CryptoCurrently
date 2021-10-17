@@ -3,7 +3,7 @@ class CryptocurrenciesController < ApplicationController
 
   # GET /cryptocurrencies
   def index
-    @cryptocurrencies = Cryptocurrency.order(:marketCap).reverse
+    @cryptocurrencies = Cryptocurrency.order(:marketCap).reverse_order
 
     render json: @cryptocurrencies
   end
