@@ -6,6 +6,14 @@ export function CryptoCard(props: {
   onDelete?: () => void;
 }) {
   const { crypto, onDelete = null } = props;
+  const [imgSrc, setImgSrc] = React.useState(
+    `https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/32@2x/color/${crypto.symbol.toLocaleLowerCase()}@2x.png`
+  );
+  React.useEffect(() => {
+    setImgSrc(
+      `https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/32@2x/color/${crypto.symbol.toLocaleLowerCase()}@2x.png`
+    );
+  }, [crypto.symbol]);
   let priceBadgeCss = "mx-3 badge bg-success";
   let plussign = "+";
   if (crypto.change_24h < 0) {
@@ -18,7 +26,12 @@ export function CryptoCard(props: {
         {/* <img width="50" src={crypto.logoUrl} alt={crypto.label} /> */}
         <img
           width="50"
-          src={`https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/32@2x/color/${crypto.symbol.toLocaleLowerCase()}@2x.png`}
+          src={imgSrc}
+          onError={() => {
+            setImgSrc(
+              `https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/32@2x/color/${"btc"}@2x.png`
+            );
+          }}
           alt={crypto.label}
         />
         <p className="fs-3 px-3 mb-0">{crypto.label} </p>

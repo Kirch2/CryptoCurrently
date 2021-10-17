@@ -38,17 +38,7 @@ export function Navbar(props: NavBarProps) {
                   activeClassName="active"
                   to="/watchlists"
                 >
-                  Watchlist
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  exact
-                  className="nav-link"
-                  activeClassName="active"
-                  to="/watchlists/new"
-                >
-                  New Watchlist
+                  Watchlists
                 </NavLink>
               </li>
               <li className="nav-item">

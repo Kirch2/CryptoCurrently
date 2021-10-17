@@ -37,7 +37,12 @@ export function WatchlistCard(props: {
 export function WatchLists() {
   return (
     <div>
-      <h1>Watchlists</h1>
+      <div className="d-flex align-items-center justify-content-between">
+        <h1>Watchlists</h1>
+        <NavLink to="/watchlists/new" className="btn btn-primary">
+          + New
+        </NavLink>
+      </div>
       <WatchlistFetcher>
         {({ loading, watchlists }) => {
           if (loading) {

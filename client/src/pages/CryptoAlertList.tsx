@@ -40,7 +40,12 @@ export function CryptoAlertCard(props: {
 export function CryptoAlerts() {
   return (
     <div>
-      <h1>Crypto Alerts</h1>
+      <div className="d-flex align-items-center justify-content-between">
+        <h1>Crypto Alerts</h1>
+        <NavLink to="/crypto_alerts/new" className="btn btn-primary">
+          + New
+        </NavLink>
+      </div>
       <CryptoAlertFetcher>
         {({ loading, cryptoAlerts }) => {
           if (loading) {

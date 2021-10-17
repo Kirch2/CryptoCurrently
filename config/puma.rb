@@ -41,9 +41,12 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
-begin
-    CryptocurrencySyncJob.perform_now
-rescue => e
-    puts "Cryptocurrency Sync Failed"
-end
+
+# Sync cryptos + send notifications
+# begin
+#     CryptocurrencySyncJob.perform_now
+# rescue => e
+#     puts "Cryptocurrency Sync Failed"
+# end
 CryptoAlert.send_all_notifications
+
