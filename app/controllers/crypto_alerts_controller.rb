@@ -16,7 +16,7 @@ class CryptoAlertsController < ApplicationController
   # POST /crypto_alerts
   def create
     @crypto_alert = CryptoAlert.new(crypto_alert_params)
-
+  
     if @crypto_alert.save
       render json: @crypto_alert, status: :created, location: @crypto_alert
     else
