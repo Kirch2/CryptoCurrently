@@ -3,7 +3,7 @@ class CryptocurrencySyncJob < ApplicationJob
 
   def perform(*args)
     Cryptocurrency.sync_all_coinmarketcap
-    sleep 120
+    sleep 30
     puts "re-queue sync job"
     CryptocurrencySyncJob.perform_now
   end
