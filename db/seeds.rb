@@ -204,4 +204,5 @@ CryptoAlert.create({
     user_id: 2,
 })
 
-Cryptocurrency.sync_all
+# Instead, run this with rails console
+# Cryptocurrency.sync_all

@@ -48,5 +48,7 @@ plugin :tmp_restart
 # rescue => e
 #     puts "Cryptocurrency Sync Failed"
 # end
-CryptoAlert.send_all_notifications
+# CryptoAlert.send_all_notifications
 
+# Start up `rails c` and enter:
+CryptocurrencySyncJob.perform_now

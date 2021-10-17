@@ -50,7 +50,7 @@ class Cryptocurrency < ApplicationRecord
         puts "sync all - coin market cap"
         
         puts "fetching w/ httparty"
-        response = HTTParty.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=5000&convert=USD' , :headers => { 'X-CMC_PRO_API_KEY' => ENV['CMC_PRO_API_KEY'] } )
+        response = HTTParty.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=200&convert=USD' , :headers => { 'X-CMC_PRO_API_KEY' => ENV['CMC_PRO_API_KEY'] } )
         resp = JSON.parse(response.body)
         puts "got response from coin market cap"
 
