@@ -56,7 +56,7 @@ export function Navbar(props: NavBarProps) {
                   exact
                   className="nav-link"
                   activeClassName="active"
-                  to="/crypto_alerts"
+                  to="/crypto_alertse"
                 >
                   Watchlist
                 </NavLink>

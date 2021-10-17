@@ -15,7 +15,12 @@ export function CryptoCard(props: {
   return (
     <div className="list-group-item d-flex align-items-center justify-content-between">
       <div className="d-flex align-items-center">
-        <img width="50" src={crypto.logoUrl} alt={crypto.label} />
+        {/* <img width="50" src={crypto.logoUrl} alt={crypto.label} /> */}
+        <img
+          width="50"
+          src={`https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@d5c68edec1f5eaec59ac77ff2b48144679cebca1/32@2x/color/${crypto.symbol.toLocaleLowerCase()}@2x.png`}
+          alt={crypto.label}
+        />
         <p className="fs-3 px-3 mb-0">{crypto.label} </p>
         <div className="">
           <div className="badge bg-dark mx-2">{crypto.symbol}</div>
