@@ -16,7 +16,7 @@ export function Navbar(props: NavBarProps) {
           to="/cryptocurrencies"
           className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
         >
-          <span className="fs-2 text-white">CurrentCrypto</span>
+          <span className="fs-2 text-white">CryptoCurrently</span>
         </NavLink>
         <ul className="nav nav-pills">
           <li className="nav-item">
