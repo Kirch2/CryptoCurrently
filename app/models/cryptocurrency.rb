@@ -58,7 +58,7 @@ class Cryptocurrency < ApplicationRecord
         cryptos.each do |crypto|
             cryptocurrency = Cryptocurrency.find_or_initialize_by(label: crypto["name"])
             cryptocurrency.symbol = crypto["symbol"]
-            cryptocurrency.price = crypto["quote"]["USD"]["price"].to_f # to_f = "to float"
+            cryptocurrency.price = crypto["quote"]["USD"]["price"].to_f.round(2) # to_f = "to float"
             cryptocurrency.logoUrl = "https://github.com/spothq/cryptocurrency-icons/raw/master/32/color/btc.png"
             cryptocurrency.description = crypto["last_updated"]
             cryptocurrency.marketCap = crypto["quote"]["USD"]["market_cap"].to_i

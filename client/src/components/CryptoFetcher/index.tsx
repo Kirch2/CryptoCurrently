@@ -26,14 +26,20 @@ interface CryptoFetcherProps {
 export function CryptoFetcher(props: CryptoFetcherProps) {
   const [cryptocurrencies, setCryptocurrencies] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [triggerUpdate, setTriggerUpdate] = React.useState(0);
+
   useEffect(() => {
     fetch("/api/cryptocurrencies", FETCH_OPTIONS)
       .then((res) => res.json())
       .then((res) => {
         setCryptocurrencies(res);
         setLoading(false);
+        // Refresh every 10 seconds
+        setTimeout(() => {
+          setTriggerUpdate(triggerUpdate + 1);
+        }, 5000);
       });
-  }, []);
+  }, [triggerUpdate]);
 
   return (
     <React.Fragment>

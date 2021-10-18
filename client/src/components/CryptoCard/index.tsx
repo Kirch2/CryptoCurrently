@@ -39,7 +39,8 @@ export function CryptoCard(props: {
           <div className="badge bg-dark mx-2">{crypto.symbol}</div>
           <div className={priceBadgeCss}>${crypto.price.toLocaleString()}</div>
           <div className={priceBadgeCss}>
-            {plussign} ${Math.abs(crypto.change_24h).toLocaleString()}
+            {plussign}
+            {Math.abs(crypto.change_24h).toLocaleString()}% / 24hr
           </div>
         </div>
       </div>

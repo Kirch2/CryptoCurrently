@@ -15,13 +15,8 @@ class CryptocurrenciesController < ApplicationController
 
   # POST /cryptocurrencies
   def create
-    @cryptocurrency = Cryptocurrency.new(cryptocurrency_params)
-
-    if @cryptocurrency.save
-      render json: @cryptocurrency, status: :created, location: @cryptocurrency
-    else
-      render json: @cryptocurrency.errors, status: :unprocessable_entity
-    end
+    CryptocurrencySyncJob.perform_now
+    render json: { syncing: "true" }
   end
 
   # PATCH/PUT /cryptocurrencies/1
