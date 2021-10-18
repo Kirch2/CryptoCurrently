@@ -43,7 +43,7 @@ export function LoginForm(props: { onSubmit: (newUser: any) => void }) {
         className="login-field form-control"
       />
       <br />
-      <input type="submit" className="btn btn-primary" id="login-button" />
+      <input type="submit" className="btn btn-success" id="login-button" />
     </form>
   );
 }

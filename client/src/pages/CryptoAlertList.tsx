@@ -19,7 +19,7 @@ export function CryptoAlertCard(props: {
       </NavLink>
       <div className="btn-group">
         <NavLink
-          className="btn btn-outline-primary btn-sm"
+          className="btn btn-outline-success btn-sm"
           to={`/crypto_alerts/${cryptoAlert.id}/edit`}
         >
           Edit
@@ -42,7 +42,7 @@ export function CryptoAlerts() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h1>Crypto Alerts</h1>
-        <NavLink to="/crypto_alerts/new" className="btn btn-primary">
+        <NavLink to="/crypto_alerts/new" className="btn btn-success">
           + New
         </NavLink>
       </div>
@@ -52,10 +52,18 @@ export function CryptoAlerts() {
             return <Loading />;
           }
 
+          if (cryptoAlerts.length === 0) {
+            return (
+              <div className="card card-body text-center mt-3">
+                <h4 className="card-text my-4">No Crypto Alerts Found</h4>
+              </div>
+            );
+          }
+
           return (
             <CryptoAlertDeleter>
               {({ loading: deleting, deleteCryptoAlert }) => (
-                <div className="">
+                <div className="mt-2">
                   {cryptoAlerts.map((cryptoAlert) => (
                     <CryptoAlertCard
                       cryptoAlert={cryptoAlert}

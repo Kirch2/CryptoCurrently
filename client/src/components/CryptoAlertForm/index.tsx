@@ -90,7 +90,7 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
         <button
           type="submit"
           disabled={props.loading}
-          className="btn btn-primary"
+          className="btn btn-success"
         >
           Create CryptoAlert
         </button>

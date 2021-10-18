@@ -10,6 +10,7 @@ import { Register } from "./pages/Register";
 import { WatchListId } from "./pages/WatchListId";
 import { CryptoAlerts } from "./pages/CryptoAlertList";
 import { CryptoAlertNew } from "./pages/CryptoAlertNew";
+import { CryptoAlertId } from "./pages/CryptoAlertId";
 
 function App() {
   const email = localStorage.getItem("email");
@@ -37,7 +38,7 @@ function App() {
                 <CryptoAlertNew />
               </Route>
               <Route exact path="/crypto_alerts/:id">
-                <p>place route here</p>
+                <CryptoAlertId />
               </Route>
               <Route exact path="/crypto_alerts/:id/edit">
                 <p>place route here</p>

@@ -16,7 +16,7 @@ export function WatchlistCard(props: {
       </NavLink>
       <div className="btn-group">
         <NavLink
-          className="btn btn-outline-primary btn-sm"
+          className="btn btn-outline-success btn-sm"
           to={`/watchlists/${watchlist.id}/edit`}
         >
           Edit
@@ -39,7 +39,7 @@ export function WatchLists() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h1>Watchlists</h1>
-        <NavLink to="/watchlists/new" className="btn btn-primary">
+        <NavLink to="/watchlists/new" className="btn btn-success">
           + New
         </NavLink>
       </div>
@@ -49,10 +49,18 @@ export function WatchLists() {
             return <Loading />;
           }
 
+          if (watchlists.length === 0) {
+            return (
+              <div className="card card-body text-center mt-3">
+                <h4 className="card-text my-4">No Watchlists Found</h4>
+              </div>
+            );
+          }
+
           return (
             <WatchListDeleter>
               {({ loading: deleting, deleteWatchList }) => (
-                <div className="">
+                <div className="mt-2">
                   {watchlists.map((watchlist) => (
                     <WatchlistCard
                       watchlist={watchlist}
