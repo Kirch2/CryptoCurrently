@@ -33,7 +33,7 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
     >
       <div className="mb-3">
         <label>CryptoAlert Label</label>
-        <input
+        <select
           value={cryptoAlert.threshold_operator}
           onChange={(e) => {
             setCryptoAlert({
@@ -43,10 +43,12 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           }}
           disabled={props.loading}
           required
-          type="text"
           placeholder="Please enter the CryptoAlert label"
           className="form-control"
-        />
+        >
+          <option value=">">{">"}</option>
+          <option value="<">{"<"}</option>
+        </select>
       </div>
       <div className="mb-3">
         <label>Threshold Value</label>
