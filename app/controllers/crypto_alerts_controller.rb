@@ -36,6 +36,7 @@ class CryptoAlertsController < ApplicationController
   # DELETE /crypto_alerts/1
   def destroy
     @crypto_alert.destroy
+    render json: @crypto_alert
   end
 
   private

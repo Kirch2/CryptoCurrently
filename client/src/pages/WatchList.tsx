@@ -11,7 +11,11 @@ export function WatchlistCard(props: {
   const { watchlist } = props;
   return (
     <li className="list-group-item d-flex align-items-center justify-content-between">
-      <NavLink exact to={`/watchlists/${watchlist.id}`}>
+      <NavLink
+        className="text-decoration-none"
+        exact
+        to={`/watchlists/${watchlist.id}`}
+      >
         {watchlist.label}
       </NavLink>
       <div className="d-block">
