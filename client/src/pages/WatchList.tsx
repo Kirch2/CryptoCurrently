@@ -14,9 +14,9 @@ export function WatchlistCard(props: {
       <NavLink exact to={`/watchlists/${watchlist.id}`}>
         {watchlist.label}
       </NavLink>
-      <div className="btn-group">
+      <div className="d-block">
         <NavLink
-          className="btn btn-outline-success btn-sm"
+          className="btn btn-outline-success btn-sm mx-2"
           to={`/watchlists/${watchlist.id}/edit`}
         >
           Edit

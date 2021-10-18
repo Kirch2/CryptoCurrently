@@ -1,7 +1,9 @@
 // Override default variables before the import
+$border-color: #999;
+$danger: rgb(201, 60, 60);
 $success: #20d786;
 $link-color: $success;
-$body-bg: #383838;
+$body-bg: #222;
 $body-color: #fff;
 $input-placeholder-color: #ddd !default;
 $blue: #000 !default;
@@ -10,53 +12,12 @@ $nav-link-hover-color: #20d786;
 $nav-pills-link-active-color: #20d786;
 $nav-pills-link-active-bg: transparent;
 $list-group-color: #fff;
-$list-group-bg: #383838;
-$list-group-border-color: #ddd;
+$list-group-bg: $body-bg;
+$list-group-border-color: $border-color;
 $card-color: #fff;
-$card-bg: #383838;
-$card-border-color: #ccc;
+$card-bg: $body-bg;
+$card-border-color: $border-color;
+$font-weight-base: 300;
+
 // // // // // Import Bootstrap and its default variables
-@import "~bootstrap/scss/_functions.scss";
-@import "~bootstrap/scss/_variables.scss";
-@import "~bootstrap/scss/mixins.scss";
-@import "~bootstrap/scss/utilities.scss";
-
-// Layout & components
-@import "~bootstrap/scss/root.scss";
-@import "~bootstrap/scss/reboot.scss";
-@import "~bootstrap/scss/type.scss";
-@import "~bootstrap/scss/images.scss";
-@import "~bootstrap/scss/containers.scss";
-@import "~bootstrap/scss/grid.scss";
-@import "~bootstrap/scss/tables.scss";
-@import "~bootstrap/scss/forms.scss";
-@import "~bootstrap/scss/buttons.scss";
-@import "~bootstrap/scss/transitions.scss";
-@import "~bootstrap/scss/dropdown.scss";
-@import "~bootstrap/scss/button-group.scss";
-@import "~bootstrap/scss/nav.scss";
-@import "~bootstrap/scss/navbar.scss";
-@import "~bootstrap/scss/card.scss";
-@import "~bootstrap/scss/accordion.scss";
-@import "~bootstrap/scss/breadcrumb.scss";
-@import "~bootstrap/scss/pagination.scss";
-@import "~bootstrap/scss/badge.scss";
-@import "~bootstrap/scss/alert.scss";
-@import "~bootstrap/scss/progress.scss";
-@import "~bootstrap/scss/list-group.scss";
-@import "~bootstrap/scss/close.scss";
-@import "~bootstrap/scss/toasts.scss";
-@import "~bootstrap/scss/modal.scss";
-@import "~bootstrap/scss/tooltip.scss";
-@import "~bootstrap/scss/popover.scss";
-@import "~bootstrap/scss/carousel.scss";
-@import "~bootstrap/scss/spinners.scss";
-@import "~bootstrap/scss/offcanvas.scss";
-@import "~bootstrap/scss/placeholders.scss";
-
-// Helpers
-@import "~bootstrap/scss/helpers.scss";
-
-// Utilities
-@import "~bootstrap/scss/utilities/api.scss";
-// scss-docs-end import-stack
+@import "~bootstrap/scss/bootstrap.scss";

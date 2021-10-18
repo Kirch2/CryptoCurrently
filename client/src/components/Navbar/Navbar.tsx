@@ -26,7 +26,7 @@ export function Navbar(props: NavBarProps) {
               activeClassName="active"
               to="/cryptocurrencies"
             >
-              Cryptocurrency
+              Coins
             </NavLink>
           </li>
           {loggedIn === true && (

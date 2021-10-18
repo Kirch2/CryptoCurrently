@@ -12,7 +12,9 @@ export function CryptoList() {
 
         return (
           <div>
-            <h1>Cryptocurrencies</h1>
+            <h1>
+              <i className="fa far-check"></i>Coins
+            </h1>
             <ul className="list-group">
               {cryptocurrencies.map((crypto) => (
                 <CryptoCard crypto={crypto} key={crypto.id} />
