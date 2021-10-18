@@ -45,7 +45,7 @@ export function CryptoAlerts() {
   return (
     <div>
       <div className="d-flex align-items-center justify-content-between">
-        <h1>Crypto Alerts</h1>
+        <h1>Alerts</h1>
         <NavLink to="/crypto_alerts/new" className="btn btn-success">
           + New
         </NavLink>

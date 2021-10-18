@@ -22,7 +22,7 @@ export function Navbar(props: NavBarProps) {
           <li className="nav-item">
             <NavLink
               exact
-              className="nav-link"
+              className="nav-link fs-4"
               activeClassName="active"
               to="/cryptocurrencies"
             >
@@ -31,7 +31,7 @@ export function Navbar(props: NavBarProps) {
           </li>
           {loggedIn === true && (
             <React.Fragment>
-              <li className="nav-item">
+              <li className="nav-item fs-4">
                 <NavLink
                   exact
                   className="nav-link"
@@ -41,10 +41,10 @@ export function Navbar(props: NavBarProps) {
                   Watchlists
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item fs-4">
                 <NavLink
                   exact
-                  className="nav-link"
+                  className="nav-link fs-4"
                   activeClassName="active"
                   to="/crypto_alerts"
                 >
@@ -62,7 +62,7 @@ export function Navbar(props: NavBarProps) {
                     history.push("/login");
                     window.location.reload();
                   }}
-                  className="nav-link"
+                  className="nav-link fs-4"
                 >
                   Logout
                 </a>
@@ -75,7 +75,7 @@ export function Navbar(props: NavBarProps) {
               <li className="nav-item">
                 <NavLink
                   exact
-                  className="nav-link"
+                  className="nav-link fs-4"
                   activeClassName="active"
                   to="/register"
                 >
@@ -84,7 +84,7 @@ export function Navbar(props: NavBarProps) {
               </li>
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
+                  className="nav-link fs-4"
                   activeClassName="active"
                   to="/login"
                 >
