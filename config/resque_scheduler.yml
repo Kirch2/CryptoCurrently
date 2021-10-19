@@ -1,6 +1,13 @@
-sleep:
+sync_top:
   every: 300s
-  class: Sleeper
+  class: CryptoSyncTop
   args:
-  queue: sleep
-  description: Runs the perform method in Sleeper
+  queue: crypto
+  description: Runs the perform method in CryptoSyncTop
+
+sync_all:
+  every: 1800s
+  class: CryptoSyncAll
+  args:
+  queue: crypto
+  description: Runs the perform method in CryptoSyncAll
