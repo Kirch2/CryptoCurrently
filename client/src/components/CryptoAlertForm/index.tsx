@@ -32,7 +32,23 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
       }}
     >
       <div className="mb-3">
-        <label>CryptoAlert Label</label>
+        <select
+          className="form-control form-control-lg"
+          onChange={(e) => {
+            setCryptoAlert({
+              ...cryptoAlert,
+              cryptocurrency_id: Number(e.currentTarget.value),
+            });
+          }}
+        >
+          <option>Select coin</option>
+          {cryptocurrencies.map((crypto) => (
+            <option value={crypto.id} key={crypto.id}>
+              {crypto.label}
+            </option>
+          ))}
+        </select>
+        <br />
         <select
           value={cryptoAlert.threshold_operator}
           onChange={(e) => {
@@ -46,8 +62,8 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           placeholder="Please enter the CryptoAlert label"
           className="form-control"
         >
-          <option value=">">{">"}</option>
-          <option value="<">{"<"}</option>
+          <option value=">">More than</option>
+          <option value="<">Less than</option>
         </select>
       </div>
       <div className="mb-3">
@@ -67,25 +83,7 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           className="form-control"
         />
       </div>
-      <div className="mb-1">
-        <label>Cryptocurrency</label>
-        <select
-          className="form-control form-control-lg"
-          onChange={(e) => {
-            setCryptoAlert({
-              ...cryptoAlert,
-              cryptocurrency_id: Number(e.currentTarget.value),
-            });
-          }}
-        >
-          <option>Select Crypto to add to Watchlist</option>
-          {cryptocurrencies.map((crypto) => (
-            <option value={crypto.id} key={crypto.id}>
-              {crypto.label}
-            </option>
-          ))}
-        </select>
-      </div>
+      <div className="mb-3"></div>
       <div className="d-flex justify-content-end">
         <button
           type="submit"

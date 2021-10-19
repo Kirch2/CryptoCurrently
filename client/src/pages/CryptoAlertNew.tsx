@@ -9,7 +9,7 @@ export function CryptoAlertNew() {
         <CryptoAlertCreator>
           {({ createCryptoAlert, loading }) => (
             <div>
-              <h1>Create new CryptoAlert</h1>
+              <h1>Alert</h1>
               <CryptoAlertForm
                 cryptocurrencies={cryptocurrencies}
                 loading={loading}
