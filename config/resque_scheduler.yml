@@ -11,3 +11,10 @@ sync_all:
   args:
   queue: crypto
   description: Runs the perform method in CryptoSyncAll
+
+sync_all:
+  every: 1800s
+  class: CryptoAlertSendAll
+  args:
+  queue: crypto
+  description: Runs the perform method in CryptoAlertSendAll
