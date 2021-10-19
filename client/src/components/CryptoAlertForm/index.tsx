@@ -31,12 +31,17 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
         props.onSubmit(cryptoAlert);
       }}
     >
+      <h1>Alert me if...</h1>
       <div className="mb-3">
         <select
-          className="form-control form-control-lg"
+          className="form-control"
           onChange={(e) => {
+            const cryptoId = Number(e.currentTarget.value);
+            const crypto = cryptocurrencies.find((c) => c.id === cryptoId);
+            console.log(crypto);
             setCryptoAlert({
               ...cryptoAlert,
+              threshold_value: Math.floor(crypto?.price || 0),
               cryptocurrency_id: Number(e.currentTarget.value),
             });
           }}
@@ -49,6 +54,7 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           ))}
         </select>
         <br />
+        <h1>Is...</h1>
         <select
           value={cryptoAlert.threshold_operator}
           onChange={(e) => {
@@ -67,21 +73,23 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
         </select>
       </div>
       <div className="mb-3">
-        <label>Threshold Value</label>
-        <input
-          value={cryptoAlert.threshold_value}
-          onChange={(e) => {
-            setCryptoAlert({
-              ...cryptoAlert,
-              threshold_value: Number(e.currentTarget.value),
-            });
-          }}
-          disabled={props.loading}
-          required
-          type="number"
-          placeholder="Please enter the CryptoAlert label"
-          className="form-control"
-        />
+        <div className="input-group mb-3">
+          <span className="input-group-text bg-dark text-success">$</span>
+          <input
+            value={cryptoAlert.threshold_value}
+            onChange={(e) => {
+              setCryptoAlert({
+                ...cryptoAlert,
+                threshold_value: Number(e.currentTarget.value),
+              });
+            }}
+            disabled={props.loading}
+            required
+            type="number"
+            placeholder="Please enter the CryptoAlert label"
+            className="form-control"
+          />
+        </div>
       </div>
       <div className="mb-3"></div>
       <div className="d-flex justify-content-end">
