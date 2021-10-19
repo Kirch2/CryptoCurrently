@@ -43,8 +43,8 @@ export function WatchLists() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h1>Watchlists</h1>
-        <NavLink to="/watchlists/new" className="btn btn-success">
-          + New
+        <NavLink to="/watchlists/new" className="btn btn-success btn-square-lg">
+          +
         </NavLink>
       </div>
       <WatchlistFetcher>

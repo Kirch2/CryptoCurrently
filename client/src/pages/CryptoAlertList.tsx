@@ -19,7 +19,7 @@ export function CryptoAlertCard(props: {
         exact
         to={`/crypto_alerts/${cryptoAlert.id}`}
       >
-        {cryptoAlert.cryptocurrency.label} Alert
+        {cryptoAlert.cryptocurrency.label} Notifications
       </NavLink>
       <div>
         <NavLink
@@ -45,9 +45,12 @@ export function CryptoAlerts() {
   return (
     <div>
       <div className="d-flex align-items-center justify-content-between">
-        <h1>Alerts</h1>
-        <NavLink to="/crypto_alerts/new" className="btn btn-success">
-          + New
+        <h1>Notifications</h1>
+        <NavLink
+          to="/crypto_alerts/new"
+          className="btn btn-success btn-square-sm"
+        >
+          +
         </NavLink>
       </div>
       <CryptoAlertFetcher>
@@ -59,7 +62,7 @@ export function CryptoAlerts() {
           if (cryptoAlerts.length === 0) {
             return (
               <div className="card card-body text-center mt-3">
-                <h4 className="card-text my-4">No Crypto Alerts Found</h4>
+                <h4 className="card-text my-4">No notifications</h4>
               </div>
             );
           }
