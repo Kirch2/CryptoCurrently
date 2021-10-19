@@ -48,7 +48,7 @@ export function Navbar(props: NavBarProps) {
                   activeClassName="active"
                   to="/crypto_alerts"
                 >
-                  Alerts
+                  Notifications
                 </NavLink>
               </li>
               <li className="nav-item">

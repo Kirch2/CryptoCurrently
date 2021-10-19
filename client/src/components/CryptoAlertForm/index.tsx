@@ -35,7 +35,8 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
         });
       }}
     >
-      <h1>Alert me if...</h1>
+      <h1>Notify me if...</h1>
+      <br />
       <div className="mb-3">
         <select
           className="form-control"
@@ -58,7 +59,8 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           ))}
         </select>
         <br />
-        <h1>Is...</h1>
+        <h1>is...</h1>
+        <br />
         <select
           value={cryptoAlert.threshold_operator}
           onChange={(e) => {
@@ -74,6 +76,7 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           <option value=">">More than</option>
           <option value="<">Less than</option>
         </select>
+        <br />
         <br />
       </div>
       <div className="mb-3">
@@ -104,7 +107,7 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           disabled={props.loading}
           className="btn btn-success"
         >
-          Create CryptoAlert
+          Set Notification
         </button>
       </div>
     </form>

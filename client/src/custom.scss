@@ -20,5 +20,11 @@ $card-border-color: $border-color;
 $font-weight-base: 300;
 $font-family-sans-serif: "Helvetica Neue";
 
+// $input-focus-bg:                        $input-bg !default;
+$input-focus-border-color: inherit !important;
+// $input-focus-color:                     $input-color !default;
+// $input-focus-width:                     $input-btn-focus-width !default;
+$input-focus-box-shadow: none !important;
+
 // // // // // Import Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap.scss";
