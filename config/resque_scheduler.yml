@@ -17,4 +17,4 @@ sync_all:
   class: CryptoAlertSendAll
   args:
   queue: crypto
-  description: Runs the perform method in CryptoAlertSendAll
+  description: Runs the perform method in CryptoAlertSendAll  
