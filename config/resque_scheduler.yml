@@ -1,0 +1,6 @@
+sleep:
+  every: 30s
+  class: Sleeper
+  args:
+  queue: sleep
+  description: Runs the perform method in Sleeper

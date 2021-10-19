@@ -24,6 +24,7 @@ module ReactRailsApiProjectTemplate
     # Adding cookies and session middleware
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
+    config.active_job.que_adapter = :resque
 
     # Use SameSite=Strict for all cookies to help protect against CSRF
     # https://owasp.org/www-community/SameSite

@@ -51,4 +51,4 @@ plugin :tmp_restart
 # CryptoAlert.send_all_notifications
 
 # Start up `rails c` and enter:
-CryptocurrencySyncJob.perform_now
+# CryptocurrencySyncJob.perform_now
