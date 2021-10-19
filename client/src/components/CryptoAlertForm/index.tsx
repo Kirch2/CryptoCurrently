@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Cryptocurrency } from "../CryptoFetcher";
+import CurrencyInput from "react-currency-input-field";
 
 interface CryptoAlertFormProps {
   loading: boolean;
@@ -28,7 +29,10 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        props.onSubmit(cryptoAlert);
+        props.onSubmit({
+          ...cryptoAlert,
+          threshold_value: Number(cryptoAlert.threshold_value),
+        });
       }}
     >
       <h1>Alert me if...</h1>
@@ -65,29 +69,31 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           }}
           disabled={props.loading}
           required
-          placeholder="Please enter the CryptoAlert label"
           className="form-control"
         >
           <option value=">">More than</option>
           <option value="<">Less than</option>
         </select>
+        <br />
       </div>
       <div className="mb-3">
         <div className="input-group mb-3">
           <span className="input-group-text bg-dark text-success">$</span>
-          <input
-            value={cryptoAlert.threshold_value}
-            onChange={(e) => {
+          <CurrencyInput
+            placeholder="Please enter target price"
+            className="form-control"
+            id="input-example"
+            name="input-name"
+            defaultValue={1000}
+            decimalsLimit={2}
+            onValueChange={(value, name) => {
               setCryptoAlert({
                 ...cryptoAlert,
-                threshold_value: Number(e.currentTarget.value),
+                // @ts-ignore
+                threshold_value: value,
               });
             }}
-            disabled={props.loading}
-            required
-            type="number"
-            placeholder="Please enter the CryptoAlert label"
-            className="form-control"
+            value={cryptoAlert.threshold_value}
           />
         </div>
       </div>
