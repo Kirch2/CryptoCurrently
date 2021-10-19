@@ -1,5 +1,5 @@
 sleep:
-  every: 30s
+  every: 300s
   class: Sleeper
   args:
   queue: sleep
