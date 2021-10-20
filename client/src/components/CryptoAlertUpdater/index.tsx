@@ -30,7 +30,7 @@ export function CryptoAlertUpdater(props: Props) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        history.push(`/crypto_alerts/${cryptoAlert.id}`);
+        history.push(`/crypto_alerts`);
         setLoading(false);
       })
       .catch(() => {
