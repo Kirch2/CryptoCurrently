@@ -26,7 +26,7 @@ export function CryptoAlertCreator(props: CryptoAlertCreatorProps) {
       .then((data) => {
         console.log(data);
         setLoading(false);
-        history.push(`/crypto_alerts/${data.id}`);
+        history.push(`/crypto_alerts`);
       })
       .catch(() => {
         setLoading(false);
