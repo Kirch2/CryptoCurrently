@@ -13,7 +13,7 @@ export function CryptoAlertEdit() {
       {({ loading: fetchingCryptos, cryptocurrencies }) => (
         <CryptoAlertIdFetcher id={id}>
           {({ cryptoAlert, loading: fetching }) => {
-            if (fetching) {
+            if (fetching || fetchingCryptos) {
               return <Loading />;
             }
             return (

@@ -37,7 +37,7 @@ export function CryptoFetcher(props: CryptoFetcherProps) {
         // Refresh every 10 seconds
         setTimeout(() => {
           setTriggerUpdate(triggerUpdate + 1);
-        }, 5000);
+        }, 150000);
       });
   }, [triggerUpdate]);
 

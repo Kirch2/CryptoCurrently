@@ -41,6 +41,7 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
       <div className="mb-3">
         <select
           className="form-control"
+          value={cryptoAlert.cryptocurrency_id}
           onChange={(e) => {
             const cryptoId = Number(e.currentTarget.value);
             const crypto = cryptocurrencies.find((c) => c.id === cryptoId);
