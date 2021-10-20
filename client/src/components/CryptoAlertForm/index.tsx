@@ -22,7 +22,7 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
   const [cryptoAlert, setCryptoAlert] = useState({
     threshold_operator,
     threshold_value,
-    user_id: 1,
+    user_id: Number(localStorage.getItem("user_id")),
     cryptocurrency_id,
   });
 
