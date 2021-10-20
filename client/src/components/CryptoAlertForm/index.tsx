@@ -8,6 +8,7 @@ interface CryptoAlertFormProps {
   threshold_value?: number;
   cryptocurrency_id?: number;
   cryptocurrencies: Cryptocurrency[];
+  action: "create" | "update";
   onSubmit: (newCryptoAlert: any) => void;
 }
 
@@ -107,7 +108,8 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           disabled={props.loading}
           className="btn btn-success"
         >
-          Set Notification
+          {props.action === "update" && "Update Notification"}
+          {props.action === "create" && "Create Notification"}
         </button>
       </div>
     </form>

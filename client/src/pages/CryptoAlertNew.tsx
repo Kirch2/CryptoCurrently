@@ -10,6 +10,7 @@ export function CryptoAlertNew() {
           {({ createCryptoAlert, loading }) => (
             <div>
               <CryptoAlertForm
+                action={"create"}
                 cryptocurrencies={cryptocurrencies}
                 loading={loading}
                 onSubmit={(newCryptoAlert) => {
