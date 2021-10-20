@@ -69,9 +69,7 @@ export function WatchListId() {
                                   });
                                 }}
                               >
-                                <option>
-                                  Select Crypto to add to Watchlist
-                                </option>
+                                <option>Select Coin</option>
                                 {cryptocurrencies
                                   .filter((c) =>
                                     filteredEntries.every(

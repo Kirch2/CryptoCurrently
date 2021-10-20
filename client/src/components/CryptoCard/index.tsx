@@ -43,7 +43,7 @@ export function CryptoCard(props: {
           <p className={labelClassName}>{crypto.label} </p>
         </div>
 
-        <div className="">
+        <div className="d-flex align-items-center">
           <div className="badge bg-dark fs-6">{crypto.symbol}</div>
           <div className={`mx-3 ${priceBadgeCss}`}>
             ${crypto.price.toLocaleString()}
@@ -54,7 +54,7 @@ export function CryptoCard(props: {
           </div>
           {onDelete !== null && (
             <button
-              className="btn btn-danger btn-sm"
+              className="ms-3 btn btn-outline-danger btn-sm"
               onClick={() => onDelete()}
             >
               Remove
