@@ -27,9 +27,17 @@ export function WatchListId() {
 
         return (
           <div>
-            <h1>{watchlist.label}</h1>
+            <div className="d-flex align-items-center justify-content-between">
+              <h1>{watchlist.label}</h1>
+
+              <NavLink
+                className="btn btn-success float-end"
+                to={`/watchlists/${watchlist.id}/edit`}
+              >
+                Edit
+              </NavLink>
+            </div>
             <p>{watchlist.description}</p>
-            <NavLink to={`/watchlists/${watchlist.id}/edit`}>Edit</NavLink>
             <WatchListEntryFetcher>
               {({ loading, watchlistentries }) => {
                 if (loading) {

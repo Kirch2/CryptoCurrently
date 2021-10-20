@@ -73,8 +73,8 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
           required
           className="form-control"
         >
-          <option value=">">More than</option>
-          <option value="<">Less than</option>
+          <option value=">">more than</option>
+          <option value="<">less than</option>
         </select>
         <br />
         <br />

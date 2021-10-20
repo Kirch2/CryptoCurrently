@@ -25,7 +25,7 @@ export function WatchListForm(props: WatchListFormProps) {
       }}
     >
       <div className="mb-3">
-        <label>Watchlist Label</label>
+        <br />
         <input
           value={watchList.label}
           onChange={(e) => {
@@ -37,12 +37,13 @@ export function WatchListForm(props: WatchListFormProps) {
           disabled={props.loading}
           required
           type="text"
-          placeholder="Please enter the watchlist label"
+          placeholder="Label"
           className="form-control"
         />
       </div>
       <div className="mb-3">
-        <label>Description</label>
+        <br />
+
         <input
           value={watchList.description}
           onChange={(e) => {
@@ -54,7 +55,7 @@ export function WatchListForm(props: WatchListFormProps) {
           disabled={props.loading}
           required
           type="text"
-          placeholder="Please enter the watchlist label"
+          placeholder="Description"
           className="form-control"
         />
       </div>

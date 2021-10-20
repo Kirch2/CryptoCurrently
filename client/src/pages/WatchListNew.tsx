@@ -6,7 +6,7 @@ export function WatchListNew() {
     <WatchListCreator>
       {({ createWatchList, loading }) => (
         <div>
-          <h1>Create new watchlist</h1>
+          <h1>Watchlist</h1>
           <WatchListForm
             loading={loading}
             onSubmit={(newWatchList) => {
