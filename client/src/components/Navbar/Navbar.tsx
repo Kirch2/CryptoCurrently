@@ -31,6 +31,14 @@ export function Navbar(props: NavBarProps) {
               Coins
             </NavLink>
           </li>
+          <NavLink
+            exact
+            className="nav-link fs-4"
+            activeClassName="active"
+            to="/resources"
+          >
+            Resources
+          </NavLink>
           {loggedIn === true && (
             <React.Fragment>
               <li className="nav-item fs-4">

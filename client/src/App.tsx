@@ -11,6 +11,7 @@ import { WatchListId } from "./pages/WatchListId";
 import { CryptoAlerts } from "./pages/CryptoAlertList";
 import { CryptoAlertNew } from "./pages/CryptoAlertNew";
 import { CryptoAlertEdit } from "./pages/CryptoAlertEdit";
+import { Resources } from "./pages/Resources";
 
 function App() {
   const email = localStorage.getItem("email");
@@ -57,6 +58,9 @@ function App() {
               </Route>
               <Route exact path="/register">
                 <Register />
+              </Route>
+              <Route exact path="/resources">
+                <Resources />
               </Route>
             </Switch>
           </div>
