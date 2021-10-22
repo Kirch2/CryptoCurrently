@@ -14,7 +14,7 @@ export function CryptoAlertCard(props: {
   const { cryptoAlert } = props;
   return (
     <li className="list-group-item d-flex align-items-center justify-content-between">
-      {cryptoAlert.cryptocurrency.label} Notifications
+      {cryptoAlert.cryptocurrency.label}
       <div>
         <NavLink
           className="btn btn-outline-success btn-sm mx-2"
