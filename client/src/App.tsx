@@ -12,6 +12,7 @@ import { CryptoAlerts } from "./pages/CryptoAlertList";
 import { CryptoAlertNew } from "./pages/CryptoAlertNew";
 import { CryptoAlertEdit } from "./pages/CryptoAlertEdit";
 import { Resources } from "./pages/Resources";
+import { Profile } from "./pages/Profile";
 
 function App() {
   const email = localStorage.getItem("email");
@@ -61,6 +62,9 @@ function App() {
               </Route>
               <Route exact path="/resources">
                 <Resources />
+              </Route>
+              <Route exact path="/profile">
+                <Profile />
               </Route>
             </Switch>
           </div>
