@@ -4,10 +4,10 @@ export function Resources() {
   return (
     <div>
       <h1>Resources</h1>
-      <ul>
+      <ul className="list-unstyled">
         <li>
+          <i className="fa fa-arrow-right me-2"></i>
           <a
-            className="bi bi-box-arrow-right"
             href="https://www.coindesk.com/"
             target="_blank"
             style={{ textDecoration: "none" }}
@@ -17,8 +17,8 @@ export function Resources() {
         </li>
         <br />
         <li>
+          <i className="fa fa-arrow-right me-2"></i>
           <a
-            className="bi bi-box-arrow-right"
             href="https://nydig.com/research/bitcoin-a-peer-to-peer-electronic-cash-system"
             target="_blank"
             style={{ textDecoration: "none" }}
@@ -28,8 +28,8 @@ export function Resources() {
         </li>
         <br />
         <li>
+          <i className="fa fa-arrow-right me-2"></i>
           <a
-            className="bi bi-box-arrow-right"
             href="https://www.bloomberg.com/crypto"
             target="_blank"
             style={{ textDecoration: "none" }}
@@ -39,8 +39,8 @@ export function Resources() {
         </li>
         <br />
         <li>
+          <i className="fa fa-arrow-right me-2"></i>
           <a
-            className="bi bi-box-arrow-right"
             href="https://nydig.com/research/bitcoins-2q21-in-review"
             target="_blank"
             style={{ textDecoration: "none" }}

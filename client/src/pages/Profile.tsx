@@ -6,6 +6,7 @@ export function Profile() {
   return (
     <div>
       <h1>Profile</h1>
+      <p>{user_id}</p>
       <UserIdFetcher id={user_id}>
         {({ user, loading }) => {
           if (loading) {
