@@ -17,14 +17,15 @@ export function Profile() {
           }
           return (
             <div>
-              <p className="fs-4">
+              <p className="fs-4 fw-light">
                 <i className="fa fa-arrow-right text-success"></i> Email:{" "}
                 {user.email}
               </p>
-              <p className="fs-4">
+              <p className="fs-4 fw-light">
                 <i className="fa fa-arrow-right text-success"></i> Username:{" "}
                 {user.username}
               </p>
+
               <br />
               <a
                 href="#logout"
