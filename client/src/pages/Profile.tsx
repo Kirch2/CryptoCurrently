@@ -1,6 +1,7 @@
 import React from "react";
 import { Loading } from "../components/Loading";
 import { UserIdFetcher } from "../components/UserIdFetcher";
+
 export function Profile() {
   const user_id = Number(localStorage.getItem("user_id"));
   return (
