@@ -37,7 +37,7 @@ export function Profile() {
                   history.push("/login");
                   window.location.reload();
                 }}
-                className="btn btn-success w-100 fs-5"
+                className="btn btn-outline-success w-100 fs-4"
               >
                 Logout
               </a>
