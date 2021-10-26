@@ -62,7 +62,7 @@ export function Resources() {
             target="_blank"
             style={{ textDecoration: "none" }}
           >
-            BitCoin in 2021
+            Bitcoin in 2021
           </a>
         </li>
       </ul>
