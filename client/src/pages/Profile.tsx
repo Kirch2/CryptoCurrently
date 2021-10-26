@@ -17,11 +17,11 @@ export function Profile() {
           }
           return (
             <div>
-              <p className="fs-4 fw-light">
+              <p className="fs-4 fw-light" style={{ letterSpacing: "1px" }}>
                 <i className="fa fa-arrow-right text-success"></i> Email:{" "}
                 {user.email}
               </p>
-              <p className="fs-4 fw-light">
+              <p className="fs-4 fw-light" style={{ letterSpacing: "1px" }}>
                 <i className="fa fa-arrow-right text-success"></i> Username:{" "}
                 {user.username}
               </p>

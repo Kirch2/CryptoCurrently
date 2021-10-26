@@ -4,8 +4,9 @@ export function Resources() {
   return (
     <div>
       <h1>Resources</h1>
+      <br />
       <ul className="list-unstyled">
-        <li className="fs-4">
+        <li className="fs-4" style={{ letterSpacing: "1px" }}>
           <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://www.coindesk.com/"
@@ -17,7 +18,19 @@ export function Resources() {
           </a>
         </li>
         <br />
-        <li className="fs-4">
+        <li className="fs-4" style={{ letterSpacing: "1px" }}>
+          <i className="fa fa-arrow-right me-2 text-success"></i>
+          <a
+            href="https://www.coinmarketcap.com/"
+            className="link-light"
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
+            CoinMarketCap
+          </a>
+        </li>
+        <br />
+        <li className="fs-4" style={{ letterSpacing: "1px" }}>
           <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://nydig.com/research/bitcoin-a-peer-to-peer-electronic-cash-system"
@@ -29,7 +42,7 @@ export function Resources() {
           </a>
         </li>
         <br />
-        <li className="fs-4">
+        <li className="fs-4" style={{ letterSpacing: "1px" }}>
           <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://www.bloomberg.com/crypto"
@@ -41,7 +54,7 @@ export function Resources() {
           </a>
         </li>
         <br />
-        <li className="fs-4">
+        <li className="fs-4" style={{ letterSpacing: "1px" }}>
           <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://nydig.com/research/bitcoins-2q21-in-review"
