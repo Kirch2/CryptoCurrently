@@ -54,16 +54,7 @@ export function Navbar(props: NavBarProps) {
                   Notifications
                 </NavLink>
               </li>
-              <li className="nav-item fs-4">
-                <NavLink
-                  exact
-                  className="nav-link fs-4"
-                  activeClassName="active"
-                  to="/profile"
-                >
-                  Profile
-                </NavLink>
-              </li>
+
               <li className="nav-item">
                 <NavLink
                   exact
@@ -72,6 +63,16 @@ export function Navbar(props: NavBarProps) {
                   to="/resources"
                 >
                   Resources
+                </NavLink>
+              </li>
+              <li className="nav-item fs-4">
+                <NavLink
+                  exact
+                  className="nav-link fs-4"
+                  activeClassName="active"
+                  to="/profile"
+                >
+                  Profile
                 </NavLink>
               </li>
               <li className="nav-item">
