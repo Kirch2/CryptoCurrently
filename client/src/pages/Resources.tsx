@@ -10,7 +10,7 @@ export function Resources() {
           <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://www.coindesk.com/"
-            className="link-light"
+            className="link-hover-color"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
@@ -22,7 +22,7 @@ export function Resources() {
           <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://www.coinmarketcap.com/"
-            className="link-light"
+            className="link-hover-color"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
@@ -34,7 +34,7 @@ export function Resources() {
           <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://nydig.com/research/bitcoin-a-peer-to-peer-electronic-cash-system"
-            className="link-light"
+            className="link-hover-color"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
@@ -46,7 +46,7 @@ export function Resources() {
           <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://www.bloomberg.com/crypto"
-            className="link-light"
+            className="link-hover-color"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
@@ -58,7 +58,7 @@ export function Resources() {
           <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://nydig.com/research/bitcoins-2q21-in-review"
-            className="link-light"
+            className="link-hover-color"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
