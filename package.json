@@ -5,5 +5,10 @@
   "scripts": {
     "postinstall": "cd client && npm install",
     "build": "cd client && npm run build && cp -R ./build/* ../public"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.6.1",
+    "font-awesome": "^4.7.0",
+    "react-bootstrap-icons": "^1.5.0"
   }
 }
