@@ -6,9 +6,10 @@ export function Resources() {
       <h1>Resources</h1>
       <ul className="list-unstyled">
         <li className="fs-4">
-          <i className="fa fa-arrow-right me-2"></i>
+          <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://www.coindesk.com/"
+            className="link-light"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
@@ -17,9 +18,10 @@ export function Resources() {
         </li>
         <br />
         <li className="fs-4">
-          <i className="fa fa-arrow-right me-2"></i>
+          <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://nydig.com/research/bitcoin-a-peer-to-peer-electronic-cash-system"
+            className="link-light"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
@@ -28,9 +30,10 @@ export function Resources() {
         </li>
         <br />
         <li className="fs-4">
-          <i className="fa fa-arrow-right me-2"></i>
+          <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://www.bloomberg.com/crypto"
+            className="link-light"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
@@ -39,9 +42,10 @@ export function Resources() {
         </li>
         <br />
         <li className="fs-4">
-          <i className="fa fa-arrow-right me-2"></i>
+          <i className="fa fa-arrow-right me-2 text-success"></i>
           <a
             href="https://nydig.com/research/bitcoins-2q21-in-review"
+            className="link-light"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
