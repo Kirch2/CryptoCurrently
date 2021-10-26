@@ -34,7 +34,7 @@ class Cryptocurrency < ApplicationRecord
         # Find the DB record you want to update, if it exists
         cryptocurrency = Cryptocurrency.find_or_initialize_by(label: crypto["name"])
         cryptocurrency.symbol = crypto["symbol"]
-        cryptocurrency.price = crypto["priceUsd"].to_f # to_f = "to float"
+        cryptocurrency.price = crypto["priceUsd"].to_i # to_f = "to float"
         cryptocurrency.logoUrl = "https://github.com/spothq/cryptocurrency-icons/raw/master/32/color/" + crypto["id"] + ".png"
         cryptocurrency.description = crypto["rank"]
         cryptocurrency.marketCap = crypto["marketCapUsd"].to_i

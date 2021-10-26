@@ -15,6 +15,7 @@ export function Resources() {
             CoinDesk
           </a>
         </li>
+        <br />
         <li>
           <a
             className="bi bi-box-arrow-right"
@@ -25,24 +26,26 @@ export function Resources() {
             Bitcoin: A Peer-to-Peer Electronic Cash System
           </a>
         </li>
+        <br />
         <li>
           <a
             className="bi bi-box-arrow-right"
-            href="https://google.com"
+            href="https://www.bloomberg.com/crypto"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
-            Google
+            Bloomberg
           </a>
         </li>
+        <br />
         <li>
           <a
             className="bi bi-box-arrow-right"
-            href="https://google.com"
+            href="https://nydig.com/research/bitcoins-2q21-in-review"
             target="_blank"
             style={{ textDecoration: "none" }}
           >
-            Google
+            BitCoin in 2021
           </a>
         </li>
       </ul>
