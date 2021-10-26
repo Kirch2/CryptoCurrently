@@ -43,7 +43,10 @@ export function WatchLists() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h1>Watchlists</h1>
-        <NavLink to="/watchlists/new" className="btn btn-success btn-square-lg">
+        <NavLink
+          to="/watchlists/new"
+          className="btn btn-outline-success btn-square-lg"
+        >
           +
         </NavLink>
       </div>
@@ -56,7 +59,7 @@ export function WatchLists() {
           if (watchlists.length === 0) {
             return (
               <div className="card card-body text-center mt-3">
-                <h4 className="card-text my-4">No Watchlists Found</h4>
+                <h4 className="card-text my-4">No watchlists</h4>
               </div>
             );
           }

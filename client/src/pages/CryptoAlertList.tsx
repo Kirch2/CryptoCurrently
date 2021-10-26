@@ -42,7 +42,7 @@ export function CryptoAlerts() {
         <h1>Notifications</h1>
         <NavLink
           to="/crypto_alerts/new"
-          className="btn btn-success btn-square-sm"
+          className="btn btn-outline-success btn-square-sm"
         >
           +
         </NavLink>
