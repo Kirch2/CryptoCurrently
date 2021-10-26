@@ -27,7 +27,7 @@ export function UserAuthenticator(props: Props) {
         console.log(data);
         if (!data.email && !data.username) {
           alert(
-            "Login unsuccessful - please enter you username and password and try again"
+            "Login unsuccessful - please enter your username and password and try again"
           );
           return;
         }
