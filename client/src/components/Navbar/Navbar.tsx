@@ -31,16 +31,7 @@ export function Navbar(props: NavBarProps) {
               Coins
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink
-              exact
-              className="nav-link fs-4"
-              activeClassName="active"
-              to="/resources"
-            >
-              Resources
-            </NavLink>
-          </li>
+
           {loggedIn === true && (
             <React.Fragment>
               <li className="nav-item fs-4">
@@ -71,6 +62,16 @@ export function Navbar(props: NavBarProps) {
                   to="/profile"
                 >
                   Profile
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  className="nav-link fs-4"
+                  activeClassName="active"
+                  to="/resources"
+                >
+                  Resources
                 </NavLink>
               </li>
               <li className="nav-item">

@@ -34,7 +34,7 @@ export function Resources() {
             target="_blank"
             style={{ textDecoration: "none" }}
           >
-            Bloomberg
+            Bloomberg Crypto
           </a>
         </li>
         <br />
