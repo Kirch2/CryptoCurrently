@@ -77,7 +77,7 @@ export function WatchListForm(props: WatchListFormProps) {
         <button
           type="submit"
           disabled={props.loading}
-          className="btn btn-success"
+          className="btn btn-outline-success"
         >
           Create Watchlist
         </button>

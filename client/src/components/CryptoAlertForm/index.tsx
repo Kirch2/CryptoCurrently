@@ -107,7 +107,7 @@ export function CryptoAlertForm(props: CryptoAlertFormProps) {
         <button
           type="submit"
           disabled={props.loading}
-          className="btn btn-success"
+          className="btn btn-outline-success"
         >
           {props.action === "update" && "Update Notification"}
           {props.action === "create" && "Create Notification"}
