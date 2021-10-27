@@ -13,6 +13,10 @@ export function CryptoList() {
         return (
           <div>
             <ul className="list-group">
+              <i className="fs-4 fa fa-arrow-right me-2 text-success">
+                <span className="text-light"> Listed by MarketCap</span>
+              </i>
+              <br />
               {cryptocurrencies.map((crypto) => (
                 <CryptoCard crypto={crypto} key={crypto.id} />
               ))}
