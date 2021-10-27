@@ -13,7 +13,7 @@ export function RegisterForm(props: { onSubmit: (newUser: any) => void }) {
         props.onSubmit(user);
       }}
     >
-      <h1>Register</h1>
+      <h1>Sign Up</h1>
       <input
         required
         value={user.username}

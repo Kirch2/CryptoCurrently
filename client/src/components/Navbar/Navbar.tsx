@@ -103,7 +103,7 @@ export function Navbar(props: NavBarProps) {
                   activeClassName="active"
                   to="/register"
                 >
-                  Register
+                  Sign Up
                 </NavLink>
               </li>
               <li className="nav-item">
