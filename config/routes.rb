@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :cryptocurrencies
     resources :users
     post 'users/login', to: "users#login"
+    post 'crypto_alerts/send_alerts', to: "crypto_alerts#send_alerts"
   end
 
   # Routing logic: fallback requests for React Router.

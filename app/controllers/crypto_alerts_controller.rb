@@ -24,6 +24,11 @@ class CryptoAlertsController < ApplicationController
     end
   end
 
+  def send_alerts
+    CryptoAlertSendAll.perform
+    render json: {success: true}
+  end
+
   # PATCH/PUT /crypto_alerts/1
   def update
     if @crypto_alert.update(crypto_alert_params)
