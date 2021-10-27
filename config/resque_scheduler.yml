@@ -6,14 +6,14 @@ sync_top:
   description: Runs the perform method in CryptoSyncTop
 
 sync_all:
-  every: 1800s
+  every: 900s
   class: CryptoSyncAll
   args:
   queue: crypto
   description: Runs the perform method in CryptoSyncAll
 
 sync_all:
-  every: 1800s
+  every: 900s
   class: CryptoAlertSendAll
   args:
   queue: crypto
