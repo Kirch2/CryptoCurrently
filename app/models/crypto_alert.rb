@@ -1,4 +1,5 @@
 class CryptoAlert < ApplicationRecord
+  include ActionView::Helpers::NumberHelper
   belongs_to :cryptocurrency
   belongs_to :user
 
@@ -18,7 +19,7 @@ class CryptoAlert < ApplicationRecord
     if (self.should_send_email)
       begin
         # TODO - update message or subject to include price
-        CryptoAlertMailer.send_email(email: self.user.email, subject: "CryptoCurrently - " + self.cryptocurrency.label + ": $" + self.cryptocurrency.price.to_s, message: "Sent with CryptoCurrently.app").deliver
+        CryptoAlertMailer.send_email(email: self.user.email, subject: "CryptoCurrently - " + self.cryptocurrency.label + ": $" + number_to_currency(self.cryptocurrency.price), message: "Sent with CryptoCurrently.app").deliver
       rescue => e
         puts "Email Send Failed"
         puts e
