@@ -31,7 +31,7 @@ export function WatchListId() {
               <h1>{watchlist.label}</h1>
 
               <NavLink
-                className="btn btn-success float-end"
+                className="btn btn-outline-success float-end"
                 to={`/watchlists/${watchlist.id}/edit`}
               >
                 Edit
