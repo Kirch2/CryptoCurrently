@@ -43,7 +43,11 @@ export function LoginForm(props: { onSubmit: (newUser: any) => void }) {
         className="login-field form-control"
       />
       <br />
-      <button type="submit" className="btn btn-success" id="login-button">
+      <button
+        type="submit"
+        className="btn btn-outline-success"
+        id="login-button"
+      >
         Submit
       </button>
     </form>
