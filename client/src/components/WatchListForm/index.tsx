@@ -13,7 +13,7 @@ export function WatchListForm(props: WatchListFormProps) {
   const [watchList, setWatchList] = useState({
     label,
     description,
-    user_id: 1,
+    user_id: Number(localStorage.user_id),
     private: isPrivate,
   });
 
