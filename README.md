@@ -1,9 +1,12 @@
-# Project Template: React/Rails API
+# CryptoCurrently
 
 ## Description
 
-This project is scaffolded so that you can build a React frontend and Rails
-backend together, and easily deploy them to Heroku.
+Web application that tracks and notifies users via email of price-changes in crypto assets
+  - Modeled custom database schema and RESTful API with Active Record, Postgres, and Ruby on Rails
+  - Integrated Resque and AWS Simple Email Service to dispatch price-change notifications to users based on alerts they create
+  - Front-end built using React, TypeScript, Bootstrap, SCSS, and the browser Fetch API
+
 
 ## Requirements
 
@@ -15,60 +18,6 @@ backend together, and easily deploy them to Heroku.
 See Environment Setup below for instructions on installing these tools if you
 don't already have them.
 
-## Setup
-
-Start by **cloning** (not forking) the project template repository and removing
-the remote:
-
-```console
-$ git clone git@github.com:learn-co-curriculum/project-template-react-rails-api.git your-project-name
-$ cd your-project-name
-$ git remote rm origin
-```
-
-Then, [create a new remote repository][create repo] on GitHub. Head to
-[github.com](https://github.com) and click the **+** icon in the top-right
-corner and follow the steps to create a new repository. **Important**: don't
-check any of the options such as 'Add a README file', 'Add a .gitignore file',
-etc — since you're importing an existing repository, creating any of those files
-on GitHub will cause issues.
-
-[create repo]: https://docs.github.com/en/github/importing-your-projects-to-github/importing-source-code-to-github/adding-an-existing-project-to-github-using-the-command-line#adding-a-project-to-github-without-github-cli
-
-If you're working with a partner,
-[add them as a collaborator][add collaborator] on GitHub. From your repo on
-GitHub, go to Settings > Manage Access > Invite a collaborator and enter your
-partner's username. Once your partner has access, they should git **clone** (not
-fork) the repository.
-
-[add collaborator]: https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository
-
-Finally, connect the GitHub remote repository to your local repository and push
-up your code:
-
-```console
-$ git remote add origin git@github.com:your-username/your-project-name.git
-$ git push -u origin main
-```
-
-When you're ready to start building your project, run:
-
-```sh
-bundle install
-rails db:create
-npm install --prefix client
-```
-
-You can use the following commands to run the application:
-
-- `rails s`: run the backend on [http://localhost:3000](http://localhost:3000)
-- `npm start --prefix client`: run the frontend on
-  [http://localhost:4000](http://localhost:4000)
-
-Make sure to also update this README to include documentation about
-your project. Here's a list of some [awesome readmes][] for inspiration.
-
-[awesome readmes]: https://github.com/matiassingers/awesome-readme
 
 ## Deploying
 
@@ -279,46 +228,3 @@ service:
 ```sh
 brew services start postgresql
 ```
-
-## Troubleshooting
-
-If you ran into any errors along the way, here are some things you can try to
-troubleshoot:
-
-- If you're on a Mac and got a server connection error when you tried to run
-  `rails db:create`, one option for solving this problem for Mac users is to
-  install the Postgres app. To do this, first uninstall `postgresql` by running
-  `brew remove postgresql`. Next, download the app from the
-  [Postgres downloads page][postgres downloads page] and install it. Launch the
-  app and click "Initialize" to create a new server. You should now be able to
-  run `rails db:create`.
-
-- If you're using WSL and got the following error running `rails db:create`:
-
-  ```txt
-  PG::ConnectionBad: FATAL:  role "yourusername" does not exist
-  ```
-
-  The issue is that you did not create a role in Postgres for the default user
-  account. Check [this video](https://www.youtube.com/watch?v=bQC5izDzOgE) for
-  one possible fix.
-
-- If your app failed to deploy at the build stage, make sure your local
-  environment is set up correctly by following the steps at the beginning of
-  this lesson. Check that you have the latest versions of Ruby and Bundler, and
-  ensure that Postgresql was installed successfully.
-
-- If you deployed successfully, but you ran into issues when you visited the
-  site, make sure you migrated and seeded the database. Also, make sure that
-  your application works locally and try to debug any issues on your local
-  machine before re-deploying. You can also check the logs on the server by
-  running `heroku logs`.
-
-For additional support, check out these guides on Heroku:
-
-- [Deploying a Rails 6 App to Heroku][heroku rails deploying guide]
-- [Rails Troubleshooting on Heroku][troubleshooting guide on heroku]
-
-[postgres downloads page]: https://postgresapp.com/downloads.html
-[heroku rails deploying guide]: https://devcenter.heroku.com/articles/getting-started-with-rails6
-[troubleshooting guide on heroku]: https://devcenter.heroku.com/articles/getting-started-with-rails6#troubleshooting
